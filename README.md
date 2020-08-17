@@ -136,5 +136,7 @@
     6.2、上锁和解锁都会是本地内存进行刷新，从而解决内存可见问题。
  7、 JSR-133 对每个变量的默认值(0、false或null)的写入与每个线程中的第一个操作同步。
  三、线程池
-  
+  1、核心线程数
+  For N <= C (corePoolSize) , the idle threads are not assigned the new incoming task, instead new threads are created.
+  For N > C (corePoolSize) and if there are some idle threads then new task is assigned there, otherwise they are put into the queue.
      
